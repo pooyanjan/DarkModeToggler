@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/****************************************************************/
+@font-face {
+    font-family: x ;
+    src: url("../../fonts/7/digital-7.ttf") format("truetype");
+}
+
+/*****************************************************************/
+
+body{
+    @apply transition-all duration-200
+}
+
+.dark{
+    @apply  bg-[#0F0F0F] transition-all duration-200  text-white
+}
+
+.switchButton{
+    @apply w-[100px] h-[50px] bg-slate-500 rounded-3xl relative cursor-pointer flex
+}
+
+.flicker{
+    @apply w-[40px] h-[40px] bg-gray-300 rounded-[20px] absolute top-[5px] left-[5px] z-20 transition-all duration-200 
+}
+
+.moon{
+    @apply  absolute top-[6px] left-[55px]  animate-pulse duration-75
+}
+.sun{
+    @apply absolute top-[6px] left-[4px]  animate-pulse duration-100
+}
+
+.dark .flicker{
+    @apply translate-x-[50px] transition-all duration-200 
+}
+
+
+/*********************** GEAR BUTTON *************************/
+
+.btn{
+    @apply flex justify-end items-start cursor-pointer duration-200 transition-all
+}
+.btn.active{
+    @apply rotate-90  duration-200 transition-all 
+}
+.dark .btn{
+    @apply stroke-orange-500 transition-all duration-200 
+}
+
+.side{
+    @apply w-[50px] h-[150px] bg-cyan-300 flex flex-col items-center justify-center fixed -right-full  -top-full rounded-3xl transition-all duration-200
+}
+.side.active{
+    @apply top-14 right-0  transition-all duration-200 
+}
+
+.dark .side{
+    @apply w-[50px] h-[150px] bg-orange-500 stroke-black transition-all duration-200 
+}
